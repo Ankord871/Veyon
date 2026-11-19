@@ -1,0 +1,7 @@
+python -m pip install psutil pywin32 pyinstaller	#нужно для подключения важных библеотек для запуска скрипта :)
+python -m PyInstaller --onefile --noconsole --name Anti_Veyon anti_veyon.py	#если не получится - можно пропустить, не особо нужно exe файл
+
+	1. Для автозапуска нужна команда shell:startup
+	2. Дальше делаем ярлык на саму прогу или копируем сам ехе туда.
+
+	3. Дальше проверяем на стуки (прослушка Veyon'а по портам) netstart -ano | findstr 11100	#Если видим много строк со статусом ESTABLISHED или TIME_WAIT флуд идёт, сокеты открываются
